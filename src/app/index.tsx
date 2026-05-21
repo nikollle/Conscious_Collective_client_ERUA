@@ -3,11 +3,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Home() {
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: "#C4BFAC" }}>
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text style={{ color: "#271118", fontSize: 32, fontWeight: "600" }}>
+    <SafeAreaView className="flex-1 bg-greige">
+      <View className="flex-1 items-center justify-center">
+        <Text className="text-oxblood text-3xl font-semibold">
           Hello Rea 🌿
         </Text>
+        <Text className="text-plum text-sm mt-2">Palette is working</Text>
       </View>
     </SafeAreaView>
   );

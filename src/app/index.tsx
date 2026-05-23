@@ -1,31 +1,32 @@
-import { Text, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import Button from "../components/Button";
-import Input from "../components/Input";
 
-export default function Home() {
-  return (
-    <SafeAreaView className="flex-1 bg-greige">
-      <View className="flex-1 items-center justify-center px-8">
-        <Text className="text-oxblood text-3xl font-semibold">
-          Hello Rea 🌿
-        </Text>
-        <Text className="text-plum text-sm mt-2">Palette is working</Text>
-        <View className="w-full mt-6">
-          <Button title="Test Button" onPress={() => console.log("works")} />
-          <Button
-            title="Secondary Test"
-            onPress={() => console.log("secondary")}
-            variant="secondary"
-          />
-          <Input
-            label="Email"
-            placeholder="Enter your email"
-            value=""
-            onChangeText={() => {}}
-          />
-        </View>
-      </View>
-    </SafeAreaView>
-  );
+import { View , Text , Image } from "react-native";
+import {SafeAreaView} from "react-native-safe-area-context";
+import {router, useRouter} from "expo-router";
+import Button from "../components/Button"; 
+
+const logoGlow = require("../app/logo-tr.png");
+
+export default function Home() { return (
+  <SafeAreaView className="flex-1 bg-greige">
+    <View className="flex-1 items-center justify-center px-8">
+     <Image source={logoGlow} className="w-24 h-24" resizeMode="contain"></Image>
+     <Text className="text-plum text-sm tracking-widest uppercase mt-4">
+       EST.2026
+     </Text>
+     <Text className="text-oxblood text-3xl font-bold text-center my-2">
+       Conscious Collective
+     </Text>
+     <Text className="text-plum text-base text-center mt-2">
+       Scan , learn , dress better
+     </Text>
+     <View className="w-full mt-8 gap-3">
+       <Button title="Sing up" onPress={() => router.push("/sign-up")} />
+       <Button title="Login" onPress={() => router.push("/log-in")} variant="secondary"></Button> 
+     </View>
+     <Text onPress={() => router.push("/(tabs)/read")} className="text-plum underline text-sm mt-4">
+       Continue as guest
+     </Text> 
+    </View>
+  </SafeAreaView>
+);
 }

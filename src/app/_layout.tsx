@@ -1,11 +1,13 @@
-import { DefaultTheme, ThemeProvider } from "@react-navigation/native";
-import React from "react";
+
+import React, { JSX } from "react";
 import "../../global.css";
 
 import { AnimatedSplashOverlay } from "@/components/animated-icon";
 import AppTabs from "@/components/app-tabs";
 
-export default function TabLayout() {
+import { DefaultTheme, ThemeProvider } from "expo-router";
+
+export default function RootLayn(): JSX.Element {
   return (
     <ThemeProvider value={DefaultTheme}>
       <AnimatedSplashOverlay />

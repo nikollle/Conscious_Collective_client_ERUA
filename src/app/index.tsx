@@ -29,7 +29,7 @@ export default function Home() {
           Scan , learn , dress better
         </Text>
         <View className="w-full mt-8 gap-3 px-5">
-          <Button title="Sing up" onPress={() => router.push("/sign-up")} />
+          <Button title="Sign up" onPress={() => router.push("/sign-up")} />
           <Button
             title="Login"
             onPress={() => router.push("/log-in")}
@@ -41,7 +41,7 @@ export default function Home() {
           className="text-plum underline text-sm mt-4"
         >
           Continue as guest
-        </Text>
+        </Text> 
       </View>
     </SafeAreaView>
   );

@@ -1,17 +1,13 @@
-
-import React, { JSX } from "react";
+import { Stack } from "expo-router";
 import "../../global.css";
 
-import { AnimatedSplashOverlay } from "@/components/animated-icon";
-import AppTabs from "@/components/app-tabs";
-
-import { DefaultTheme, ThemeProvider } from "expo-router";
-
-export default function RootLayn(): JSX.Element {
+export default function RootLayout() {
   return (
-    <ThemeProvider value={DefaultTheme}>
-      <AnimatedSplashOverlay />
-      <AppTabs />
-    </ThemeProvider>
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="index" />
+      <Stack.Screen name="sign-up" />
+      <Stack.Screen name="log-in" />
+      <Stack.Screen name="(tabs)" />
+    </Stack>
   );
 }

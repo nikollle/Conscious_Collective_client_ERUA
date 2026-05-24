@@ -41,7 +41,7 @@ export default function Home() {
           className="text-plum underline text-sm mt-4"
         >
           Continue as guest
-        </Text> 
+        </Text>
       </View>
     </SafeAreaView>
   );

@@ -26,7 +26,7 @@ export default function Home() {
           Conscious Collective
         </Text>
         <Text className="text-plum text-base text-center mt-2">
-          Scan , learn , dress better
+          Scan, learn, dress better
         </Text>
         <View className="w-full mt-8 gap-3 px-5">
           <Button title="Sign up" onPress={() => router.push("/sign-up")} />

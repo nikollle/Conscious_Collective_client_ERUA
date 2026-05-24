@@ -4,7 +4,7 @@
     "slug": "Conscious_Collective_client_ERUA",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/logo-tr.png",
     "scheme": "consciouscollectiveclienterua",
     "userInterfaceStyle": "automatic",
     "ios": {
@@ -38,8 +38,7 @@
       "expo-secure-store",
       "expo-font",
       "expo-image",
-      "expo-status-bar",
-      "expo-web-browser"
+"expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true,

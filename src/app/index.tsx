@@ -22,7 +22,10 @@ export default function Home() {
         <Text className="text-plum text-sm tracking-widest uppercase">
           EST.2026
         </Text>
-        <Text className="text-oxblood text-3xl font-bold text-center my-2">
+        <Text
+          className="text-oxblood text-3xl text-center my-2"
+          style={{ fontFamily: "ManlineSlabs" }}
+        >
           Conscious Collective
         </Text>
         <Text className="text-plum text-base text-center mt-2">

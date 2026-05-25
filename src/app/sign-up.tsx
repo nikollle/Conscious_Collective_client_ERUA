@@ -29,7 +29,10 @@ export default function SignUp() {
           contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
           className="px-8"
         >
-          <Text className="text-oxblood text-3xl font-bold text-center mb-8">
+          <Text
+            className="text-oxblood text-3xl text-center mb-8"
+            style={{ fontFamily: "ManlineSlabs" }}
+          >
             Create account
           </Text>
 

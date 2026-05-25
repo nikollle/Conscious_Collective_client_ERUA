@@ -25,7 +25,10 @@ export default function LogIn() {
           contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
           className="px-8"
         >
-          <Text className="text-oxblood text-3xl font-bold text-center mb-8">
+          <Text
+            className="text-oxblood text-3xl text-center mb-8"
+            style={{ fontFamily: "ManlineSlabs" }}
+          >
             Welcome back
           </Text>
 

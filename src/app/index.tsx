@@ -3,7 +3,7 @@ import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Button from "../components/Button";
 
-const logoGlow = require("../app/logo-tr.png");
+const logoGlow = require("../../assets/logo-tr.png");
 
 export default function Home() {
   return (

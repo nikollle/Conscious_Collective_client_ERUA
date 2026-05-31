@@ -1,11 +1,24 @@
-import { router } from "expo-router";
+import { useRouter } from "expo-router";
+import { useEffect } from "react";
 import { Image, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Button from "../components/Button";
+import { useAuth } from "../context/AuthContext";
 
 const logoGlow = require("../../assets/logo-tr.png");
 
 export default function Home() {
+  const router = useRouter();
+  const { isLoading, isLoggedIn, isGuest, continueAsGuest } = useAuth();
+
+  useEffect(() => {
+    if (!isLoading && (isLoggedIn || isGuest)) {
+      router.replace("/(tabs)/read");
+    }
+  }, [isLoading, isLoggedIn, isGuest]);
+
+  if (isLoading) return null;
+
   return (
     <SafeAreaView className="flex-1 bg-greige">
       <View className="flex-1 items-center px-8 pt-24">
@@ -18,7 +31,7 @@ export default function Home() {
             marginBottom: -380,
           }}
           resizeMode="contain"
-        ></Image>
+        />
         <Text className="text-plum text-sm tracking-widest uppercase">
           EST.2026
         </Text>
@@ -37,10 +50,10 @@ export default function Home() {
             title="Login"
             onPress={() => router.push("/log-in")}
             variant="secondary"
-          ></Button>
+          />
         </View>
         <Text
-          onPress={() => router.push("/(tabs)/read")}
+          onPress={() => continueAsGuest().then(() => router.replace("/(tabs)/read"))}
           className="text-plum underline text-sm mt-4"
         >
           Continue as guest

@@ -1,4 +1,4 @@
-import { Text, TextInput, View } from "react-native";
+import { KeyboardTypeOptions, Text, TextInput, TextInputProps, View } from "react-native";
 
 type InputProps = {
   placeholder: string;
@@ -6,6 +6,8 @@ type InputProps = {
   onChangeText: (text: string) => void;
   secureTextEntry?: boolean;
   label?: string;
+  keyboardType?: KeyboardTypeOptions;
+  autoCapitalize?: TextInputProps["autoCapitalize"];
 };
 
 export default function Input({
@@ -14,6 +16,8 @@ export default function Input({
   onChangeText,
   secureTextEntry = false,
   label,
+  keyboardType,
+  autoCapitalize,
 }: InputProps) {
   return (
     <View className="w-full mb-3">
@@ -23,6 +27,8 @@ export default function Input({
         value={value}
         onChangeText={onChangeText}
         secureTextEntry={secureTextEntry}
+        keyboardType={keyboardType}
+        autoCapitalize={autoCapitalize}
         placeholderTextColor="#6E4148"
         className="w-full bg-chalk border border-stone rounded-xl px-4 py-3 text-oxblood"
       />

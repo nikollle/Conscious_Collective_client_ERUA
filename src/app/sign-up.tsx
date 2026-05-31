@@ -11,20 +11,38 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import Button from "../components/Button";
 import Input from "../components/Input";
+import { useAuth } from "../context/AuthContext";
 
 export default function SignUp() {
   const router = useRouter();
+  const { signUp, continueAsGuest } = useAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  const handleSignUp = async () => {
+    setError(null);
+    setLoading(true);
+    const err = await signUp(name.trim(), email.trim(), password);
+    setLoading(false);
+    if (err) {
+      setError(err);
+    } else {
+      router.replace("/(tabs)/read");
+    }
+  };
+
+  const handleGuest = () => {
+    continueAsGuest();
+    router.replace("/(tabs)/read");
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-greige">
-      <KeyboardAvoidingView
-        behavior="height"
-        className="flex-1"
-      >
+      <KeyboardAvoidingView behavior="height" className="flex-1">
         <ScrollView
           contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}
           className="px-8"
@@ -40,21 +58,23 @@ export default function SignUp() {
             label="Name"
             placeholder="Your name"
             value={name}
-            onChangeText={setName}
+            onChangeText={(t) => { setName(t); setError(null); }}
           />
           <Input
             label="Email"
             placeholder="you@example.com"
             value={email}
-            onChangeText={setEmail}
+            onChangeText={(t) => { setEmail(t); setError(null); }}
+            keyboardType="email-address"
+            autoCapitalize="none"
           />
 
           <View>
             <Input
               label="Password"
-              placeholder="Create a password"
+              placeholder="Create a password (min. 8 chars)"
               value={password}
-              onChangeText={setPassword}
+              onChangeText={(t) => { setPassword(t); setError(null); }}
               secureTextEntry={!showPassword}
             />
             <TouchableOpacity
@@ -70,10 +90,16 @@ export default function SignUp() {
             </TouchableOpacity>
           </View>
 
-          <View className="mt-6">
+          {error && (
+            <View className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 mb-4">
+              <Text className="text-red-700 text-sm">{error}</Text>
+            </View>
+          )}
+
+          <View className="mt-2">
             <Button
-              title="Sign up"
-              onPress={() => router.replace("/(tabs)/read")}
+              title={loading ? "Creating account…" : "Sign up"}
+              onPress={handleSignUp}
             />
           </View>
 
@@ -83,6 +109,19 @@ export default function SignUp() {
           >
             Already have an account? <Text className="underline">Log in</Text>
           </Text>
+
+          <View className="flex-row items-center my-5">
+            <View className="flex-1" style={{ height: 1, backgroundColor: "#ADA590" }} />
+            <Text className="text-plum text-xs mx-3">or</Text>
+            <View className="flex-1" style={{ height: 1, backgroundColor: "#ADA590" }} />
+          </View>
+
+          <TouchableOpacity
+            onPress={handleGuest}
+            className="border border-stone rounded-xl py-4 items-center"
+          >
+            <Text className="text-oxblood text-base">Continue as guest</Text>
+          </TouchableOpacity>
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>

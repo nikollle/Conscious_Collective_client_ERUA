@@ -18,7 +18,7 @@ export default function Read() {
             <Text className="text-plum text-xs uppercase tracking-widest">
               {new Date().toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}
             </Text>
-            <Text className="text-oxblood text-3xl font-bold mt-1 mb-4">Read</Text>
+            <Text className="text-oxblood text-3xl mt-1 mb-4" style={{ fontFamily: "ManlineSlabs" }}>Read</Text>
 
             {featured && (
               <TouchableOpacity onPress={() => Linking.openURL(featured.url)}>
@@ -36,7 +36,7 @@ export default function Read() {
               </TouchableOpacity>
             )}
 
-            <Text className="text-oxblood text-lg font-semibold mb-3">Latest</Text>
+            <Text className="text-oxblood text-lg mb-3" style={{ fontFamily: "ManlineSlabs" }}>Latest</Text>
           </View>
         }
         renderItem={({ item }) => (

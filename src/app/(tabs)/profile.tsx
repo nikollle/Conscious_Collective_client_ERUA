@@ -33,7 +33,8 @@ function Divider() {
 
 export default function Profile() {
   const router = useRouter();
-  const { userName, userEmail, userInitials, userAvatar, isGuest, logout } = useAuth();
+  const { userName, userEmail, userInitials, userAvatar, isGuest, logout } =
+    useAuth();
   const { clearWardrobe } = useWardrobe();
 
   const displayName = isGuest ? "Guest" : userName || "User";
@@ -56,15 +57,7 @@ export default function Profile() {
         >
           Profile
         </Text>
-        <View
-          style={{
-            height: 1,
-            backgroundColor: "#271118",
-            marginTop: 8,
-            marginBottom: 28,
-            opacity: 0.3,
-          }}
-        />
+        <View style={{ marginTop: 8, marginBottom: 28 }} />
 
         {/* Avatar + info */}
         <View className="items-center mb-8">

@@ -18,7 +18,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Organic cotton", "Slow fashion"],
     certifications: ["GOTS"],
-    score: 85,
+    score: 8.5,
     category: "both",
   },
   {
@@ -27,7 +27,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Slow fashion", "Organic"],
     certifications: ["GOTS"],
-    score: 88,
+    score: 8.8,
     category: "both",
   },
   {
@@ -36,7 +36,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Secondhand", "Circular"],
     certifications: [],
-    score: 82,
+    score: 8.2,
     category: "local",
   },
   {
@@ -45,7 +45,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Zero waste", "Local production"],
     certifications: [],
-    score: 79,
+    score: 7.9,
     category: "local",
   },
   {
@@ -54,7 +54,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Recycled materials"],
     certifications: ["OEKO-TEX"],
-    score: 71,
+    score: 7.1,
     category: "both",
   },
   {
@@ -63,7 +63,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Organic cotton", "Slow fashion"],
     certifications: ["GOTS"],
-    score: 87,
+    score: 8.7,
     category: "both",
   },
   {
@@ -72,7 +72,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Handmade", "Organic linen"],
     certifications: ["OEKO-TEX"],
-    score: 83,
+    score: 8.3,
     category: "both",
   },
   {
@@ -81,7 +81,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Eco-friendly", "Local production"],
     certifications: [],
-    score: 76,
+    score: 7.6,
     category: "local",
   },
   {
@@ -90,7 +90,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Natural fabrics", "Vegan"],
     certifications: [],
-    score: 74,
+    score: 7.4,
     category: "local",
   },
   {
@@ -99,7 +99,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Organic linen", "Eco-friendly"],
     certifications: [],
-    score: 72,
+    score: 7.2,
     category: "local",
   },
   {
@@ -108,7 +108,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Handmade", "Natural materials"],
     certifications: [],
-    score: 70,
+    score: 7.0,
     category: "local",
   },
   {
@@ -117,7 +117,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Minimalist", "Sustainable"],
     certifications: [],
-    score: 68,
+    score: 6.8,
     category: "local",
   },
   {
@@ -126,7 +126,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Organic", "Slow fashion"],
     certifications: ["GOTS"],
-    score: 90,
+    score: 9.0,
     category: "both",
   },
   {
@@ -135,7 +135,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Recycled", "Mass market"],
     certifications: ["OEKO-TEX"],
-    score: 45,
+    score: 4.5,
     category: "both",
   },
   {
@@ -144,7 +144,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Fast fashion", "Some recycled"],
     certifications: [],
-    score: 28,
+    score: 2.8,
     category: "local",
   },
 
@@ -157,7 +157,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Recycled", "Fair Trade", "Repair program"],
     certifications: ["Fair Trade", "Bluesign", "B Corp"],
-    score: 94,
+    score: 9.4,
     category: "certified",
   },
   {
@@ -166,7 +166,7 @@ export const brands: Brand[] = [
     country: "Germany",
     tags: ["Organic", "Fair Trade"],
     certifications: ["GOTS", "Fair Trade", "B Corp"],
-    score: 91,
+    score: 9.1,
     category: "certified",
   },
   {
@@ -175,7 +175,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Vegan", "Recycled", "Luxury"],
     certifications: ["B Corp"],
-    score: 85,
+    score: 8.5,
     category: "certified",
   },
   {
@@ -184,7 +184,7 @@ export const brands: Brand[] = [
     country: "France",
     tags: ["Organic", "Fair Trade sneakers"],
     certifications: ["B Corp"],
-    score: 88,
+    score: 8.8,
     category: "certified",
   },
   {
@@ -193,7 +193,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Hemp", "Organic cotton"],
     certifications: ["GOTS", "OEKO-TEX"],
-    score: 82,
+    score: 8.2,
     category: "certified",
   },
   {
@@ -202,7 +202,7 @@ export const brands: Brand[] = [
     country: "Australia",
     tags: ["Fair Trade", "Organic", "Vegan"],
     certifications: ["Fair Trade", "GOTS"],
-    score: 93,
+    score: 9.3,
     category: "certified",
   },
   {
@@ -211,7 +211,7 @@ export const brands: Brand[] = [
     country: "Netherlands",
     tags: ["Circular denim", "Lease model"],
     certifications: ["B Corp", "GOTS"],
-    score: 92,
+    score: 9.2,
     category: "certified",
   },
   {
@@ -220,7 +220,7 @@ export const brands: Brand[] = [
     country: "India",
     tags: ["Fair Trade", "Organic cotton"],
     certifications: ["Fair Trade", "GOTS"],
-    score: 91,
+    score: 9.1,
     category: "certified",
   },
   {
@@ -229,7 +229,7 @@ export const brands: Brand[] = [
     country: "Australia",
     tags: ["Made to order", "Zero waste"],
     certifications: ["B Corp"],
-    score: 89,
+    score: 8.9,
     category: "certified",
   },
   {
@@ -238,7 +238,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Fair Trade", "Organic"],
     certifications: ["Fair Trade", "GOTS"],
-    score: 90,
+    score: 9.0,
     category: "certified",
   },
   {
@@ -247,7 +247,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Organic denim", "Free repairs"],
     certifications: ["GOTS", "Fair Trade"],
-    score: 87,
+    score: 8.7,
     category: "certified",
   },
   {
@@ -256,7 +256,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Low waste", "Sustainable fabrics"],
     certifications: [],
-    score: 72,
+    score: 7.2,
     category: "certified",
   },
   {
@@ -265,7 +265,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Circular", "Organic", "Takeback program"],
     certifications: ["B Corp", "Bluesign"],
-    score: 86,
+    score: 8.6,
     category: "certified",
   },
   {
@@ -274,7 +274,7 @@ export const brands: Brand[] = [
     country: "Canada",
     tags: ["Plant trees", "Organic"],
     certifications: ["B Corp"],
-    score: 83,
+    score: 8.3,
     category: "certified",
   },
   {
@@ -283,7 +283,7 @@ export const brands: Brand[] = [
     country: "Canada",
     tags: ["Egyptian cotton", "Fair wages"],
     certifications: ["B Corp"],
-    score: 81,
+    score: 8.1,
     category: "certified",
   },
   {
@@ -292,7 +292,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Natural materials", "Carbon neutral"],
     certifications: ["B Corp"],
-    score: 78,
+    score: 7.8,
     category: "certified",
   },
   {
@@ -301,7 +301,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Organic cotton", "Fair Trade"],
     certifications: ["Fair Trade", "GOTS"],
-    score: 86,
+    score: 8.6,
     category: "certified",
   },
   {
@@ -310,7 +310,7 @@ export const brands: Brand[] = [
     country: "Denmark",
     tags: ["Organic", "Recycled", "Basics"],
     certifications: ["GOTS", "OEKO-TEX"],
-    score: 84,
+    score: 8.4,
     category: "certified",
   },
   {
@@ -319,7 +319,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Bio-materials", "Science-driven"],
     certifications: [],
-    score: 75,
+    score: 7.5,
     category: "certified",
   },
   {
@@ -328,7 +328,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Circular", "Renewable energy"],
     certifications: ["GOTS", "B Corp"],
-    score: 90,
+    score: 9.0,
     category: "certified",
   },
 
@@ -341,7 +341,7 @@ export const brands: Brand[] = [
     country: "Spain",
     tags: ["Recycled ocean plastic", "B Corp"],
     certifications: ["B Corp", "Bluesign"],
-    score: 84,
+    score: 8.4,
     category: "certified",
   },
   {
@@ -350,7 +350,7 @@ export const brands: Brand[] = [
     country: "Netherlands",
     tags: ["Organic denim", "Circular"],
     certifications: ["GOTS", "Fair Trade"],
-    score: 83,
+    score: 8.3,
     category: "certified",
   },
   {
@@ -359,7 +359,7 @@ export const brands: Brand[] = [
     country: "Denmark",
     tags: ["Organic", "Recycled"],
     certifications: ["GOTS", "OEKO-TEX", "B Corp"],
-    score: 88,
+    score: 8.8,
     category: "certified",
   },
   {
@@ -368,7 +368,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Organic", "Fair Trade basics"],
     certifications: ["GOTS", "Fair Trade"],
-    score: 85,
+    score: 8.5,
     category: "certified",
   },
   {
@@ -377,7 +377,7 @@ export const brands: Brand[] = [
     country: "Germany",
     tags: ["Organic", "GOTS certified"],
     certifications: ["GOTS"],
-    score: 82,
+    score: 8.2,
     category: "certified",
   },
   {
@@ -386,7 +386,7 @@ export const brands: Brand[] = [
     country: "Germany",
     tags: ["Transparent pricing", "Organic"],
     certifications: ["GOTS"],
-    score: 80,
+    score: 8.0,
     category: "certified",
   },
   {
@@ -395,7 +395,7 @@ export const brands: Brand[] = [
     country: "Spain",
     tags: ["Hemp", "Organic cotton"],
     certifications: ["GOTS"],
-    score: 81,
+    score: 8.1,
     category: "certified",
   },
   {
@@ -404,7 +404,7 @@ export const brands: Brand[] = [
     country: "Portugal",
     tags: ["Organic basics", "Recycled"],
     certifications: ["GOTS", "OEKO-TEX"],
-    score: 83,
+    score: 8.3,
     category: "certified",
   },
   {
@@ -413,7 +413,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Organic", "Recycled bags"],
     certifications: ["Bluesign"],
-    score: 77,
+    score: 7.7,
     category: "certified",
   },
   {
@@ -422,7 +422,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Durable", "Recycled"],
     certifications: ["Bluesign", "OEKO-TEX"],
-    score: 76,
+    score: 7.6,
     category: "certified",
   },
 
@@ -435,7 +435,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Move to Zero", "Some recycled"],
     certifications: ["Bluesign"],
-    score: 42,
+    score: 4.2,
     category: "certified",
   },
   {
@@ -444,7 +444,7 @@ export const brands: Brand[] = [
     country: "Germany",
     tags: ["Parley ocean plastic", "Some recycled"],
     certifications: ["Bluesign"],
-    score: 48,
+    score: 4.8,
     category: "certified",
   },
   {
@@ -453,7 +453,7 @@ export const brands: Brand[] = [
     country: "Germany",
     tags: ["RE:SUEDE", "Some sustainable"],
     certifications: ["Bluesign"],
-    score: 46,
+    score: 4.6,
     category: "certified",
   },
   {
@@ -462,7 +462,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Water<Less", "Organic cotton"],
     certifications: ["B Corp"],
-    score: 55,
+    score: 5.5,
     category: "certified",
   },
   {
@@ -471,7 +471,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Conscious line", "Garment collecting"],
     certifications: ["OEKO-TEX"],
-    score: 35,
+    score: 3.5,
     category: "certified",
   },
   {
@@ -480,7 +480,7 @@ export const brands: Brand[] = [
     country: "Spain",
     tags: ["Join Life line", "Some recycled"],
     certifications: [],
-    score: 30,
+    score: 3.0,
     category: "certified",
   },
   {
@@ -489,7 +489,7 @@ export const brands: Brand[] = [
     country: "Japan",
     tags: ["LifeWear", "RE.UNIQLO"],
     certifications: [],
-    score: 38,
+    score: 3.8,
     category: "certified",
   },
   {
@@ -498,7 +498,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Some organic cotton"],
     certifications: [],
-    score: 32,
+    score: 3.2,
     category: "certified",
   },
   {
@@ -507,7 +507,7 @@ export const brands: Brand[] = [
     country: "Spain",
     tags: ["Committed line", "Some organic"],
     certifications: ["OEKO-TEX"],
-    score: 36,
+    score: 3.6,
     category: "certified",
   },
   {
@@ -516,7 +516,7 @@ export const brands: Brand[] = [
     country: "Germany",
     tags: ["Organic cotton leader", "#WearTheChange"],
     certifications: ["GOTS", "OEKO-TEX"],
-    score: 52,
+    score: 5.2,
     category: "certified",
   },
   {
@@ -525,7 +525,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Some sustainable materials"],
     certifications: [],
-    score: 40,
+    score: 4.0,
     category: "certified",
   },
   {
@@ -534,7 +534,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Circular design", "Some organic"],
     certifications: [],
-    score: 44,
+    score: 4.4,
     category: "certified",
   },
   {
@@ -543,7 +543,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Radical transparency", "Ethical factories"],
     certifications: [],
-    score: 55,
+    score: 5.5,
     category: "certified",
   },
   {
@@ -552,7 +552,7 @@ export const brands: Brand[] = [
     country: "Japan",
     tags: ["Organic cotton", "Minimalist"],
     certifications: ["OEKO-TEX"],
-    score: 50,
+    score: 5.0,
     category: "certified",
   },
   {
@@ -561,7 +561,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Renewed program", "Recycled"],
     certifications: ["Bluesign"],
-    score: 48,
+    score: 4.8,
     category: "certified",
   },
 
@@ -574,7 +574,7 @@ export const brands: Brand[] = [
     country: "Italy",
     tags: ["Equilibrium", "Carbon neutral"],
     certifications: [],
-    score: 50,
+    score: 5.0,
     category: "certified",
   },
   {
@@ -583,7 +583,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["ReBurberry", "Regenerative farming"],
     certifications: [],
-    score: 46,
+    score: 4.6,
     category: "certified",
   },
   {
@@ -592,7 +592,7 @@ export const brands: Brand[] = [
     country: "Italy",
     tags: ["Re-Nylon", "Recycled materials"],
     certifications: [],
-    score: 42,
+    score: 4.2,
     category: "certified",
   },
   {
@@ -601,7 +601,7 @@ export const brands: Brand[] = [
     country: "France",
     tags: ["LIFE 360", "Certified materials"],
     certifications: [],
-    score: 40,
+    score: 4.0,
     category: "certified",
   },
   {
@@ -610,7 +610,7 @@ export const brands: Brand[] = [
     country: "France",
     tags: ["Artisan craftsmanship", "Longevity"],
     certifications: [],
-    score: 45,
+    score: 4.5,
     category: "certified",
   },
   {
@@ -619,7 +619,7 @@ export const brands: Brand[] = [
     country: "France",
     tags: ["Some recycled"],
     certifications: [],
-    score: 35,
+    score: 3.5,
     category: "certified",
   },
   {
@@ -628,7 +628,7 @@ export const brands: Brand[] = [
     country: "Italy",
     tags: ["Fur-free", "Some sustainable"],
     certifications: [],
-    score: 33,
+    score: 3.3,
     category: "certified",
   },
   {
@@ -637,7 +637,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Activism", "Upcycled"],
     certifications: [],
-    score: 58,
+    score: 5.8,
     category: "certified",
   },
 
@@ -650,7 +650,7 @@ export const brands: Brand[] = [
     country: "Canada",
     tags: ["Like New", "Some recycled"],
     certifications: ["Bluesign"],
-    score: 47,
+    score: 4.7,
     category: "certified",
   },
   {
@@ -659,7 +659,7 @@ export const brands: Brand[] = [
     country: "Switzerland",
     tags: ["Cyclon subscription", "Bio-based"],
     certifications: [],
-    score: 52,
+    score: 5.2,
     category: "certified",
   },
   {
@@ -668,7 +668,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Circular", "Rental program"],
     certifications: ["Bluesign", "B Corp"],
-    score: 89,
+    score: 8.9,
     category: "certified",
   },
   {
@@ -677,7 +677,7 @@ export const brands: Brand[] = [
     country: "France",
     tags: ["Organic", "Recycled", "B Corp"],
     certifications: ["B Corp", "Bluesign"],
-    score: 86,
+    score: 8.6,
     category: "certified",
   },
   {
@@ -686,7 +686,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Remnant materials", "B Corp"],
     certifications: ["B Corp"],
-    score: 84,
+    score: 8.4,
     category: "certified",
   },
   {
@@ -695,7 +695,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Organic", "Fair Trade", "Hemp"],
     certifications: ["Fair Trade", "Bluesign"],
-    score: 82,
+    score: 8.2,
     category: "certified",
   },
   {
@@ -704,7 +704,7 @@ export const brands: Brand[] = [
     country: "New Zealand",
     tags: ["Merino wool", "Transparent"],
     certifications: ["B Corp"],
-    score: 80,
+    score: 8.0,
     category: "certified",
   },
 
@@ -717,7 +717,7 @@ export const brands: Brand[] = [
     country: "China",
     tags: ["Ultra-fast fashion"],
     certifications: [],
-    score: 8,
+    score: 0.8,
     category: "certified",
   },
   {
@@ -726,7 +726,7 @@ export const brands: Brand[] = [
     country: "Ireland",
     tags: ["Some organic cotton"],
     certifications: [],
-    score: 25,
+    score: 2.5,
     category: "certified",
   },
   {
@@ -735,7 +735,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Fast fashion"],
     certifications: [],
-    score: 12,
+    score: 1.2,
     category: "certified",
   },
   {
@@ -744,7 +744,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Fast fashion"],
     certifications: [],
-    score: 10,
+    score: 1.0,
     category: "certified",
   },
   {
@@ -753,7 +753,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Ultra-fast fashion"],
     certifications: [],
-    score: 14,
+    score: 1.4,
     category: "certified",
   },
   {
@@ -762,7 +762,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Fast fashion"],
     certifications: [],
-    score: 12,
+    score: 1.2,
     category: "certified",
   },
   {
@@ -771,7 +771,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Fast fashion"],
     certifications: [],
-    score: 11,
+    score: 1.1,
     category: "certified",
   },
   {
@@ -780,7 +780,7 @@ export const brands: Brand[] = [
     country: "China",
     tags: ["Ultra-fast fashion"],
     certifications: [],
-    score: 7,
+    score: 0.7,
     category: "certified",
   },
   {
@@ -789,7 +789,7 @@ export const brands: Brand[] = [
     country: "China",
     tags: ["Ultra-fast fashion"],
     certifications: [],
-    score: 6,
+    score: 0.6,
     category: "certified",
   },
   {
@@ -798,7 +798,7 @@ export const brands: Brand[] = [
     country: "Germany",
     tags: ["Fast fashion"],
     certifications: [],
-    score: 20,
+    score: 2.0,
     category: "certified",
   },
   {
@@ -807,7 +807,7 @@ export const brands: Brand[] = [
     country: "Spain",
     tags: ["Fast fashion", "Some recycled"],
     certifications: [],
-    score: 26,
+    score: 2.6,
     category: "certified",
   },
   {
@@ -816,7 +816,7 @@ export const brands: Brand[] = [
     country: "Spain",
     tags: ["Fast fashion", "Some recycled"],
     certifications: [],
-    score: 27,
+    score: 2.7,
     category: "certified",
   },
   {
@@ -825,7 +825,7 @@ export const brands: Brand[] = [
     country: "Spain",
     tags: ["Fast fashion"],
     certifications: [],
-    score: 25,
+    score: 2.5,
     category: "certified",
   },
 
@@ -838,7 +838,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Organic denim", "Ethical"],
     certifications: ["GOTS"],
-    score: 80,
+    score: 8.0,
     category: "certified",
   },
   {
@@ -847,7 +847,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Organic", "Fair wages"],
     certifications: ["GOTS"],
-    score: 82,
+    score: 8.2,
     category: "certified",
   },
   {
@@ -856,7 +856,7 @@ export const brands: Brand[] = [
     country: "UK",
     tags: ["Ocean-minded", "Recycled"],
     certifications: ["B Corp"],
-    score: 81,
+    score: 8.1,
     category: "certified",
   },
   {
@@ -865,7 +865,7 @@ export const brands: Brand[] = [
     country: "Sweden",
     tags: ["Permanent collection", "Transparent"],
     certifications: [],
-    score: 77,
+    score: 7.7,
     category: "certified",
   },
   {
@@ -874,7 +874,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Fair Trade", "Organic"],
     certifications: ["Fair Trade", "GOTS"],
-    score: 85,
+    score: 8.5,
     category: "certified",
   },
   {
@@ -883,7 +883,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Recycled bottles", "Inclusive"],
     certifications: [],
-    score: 74,
+    score: 7.4,
     category: "certified",
   },
   {
@@ -892,7 +892,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Recycled denim", "Vegan"],
     certifications: ["OEKO-TEX"],
-    score: 76,
+    score: 7.6,
     category: "certified",
   },
   {
@@ -901,7 +901,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Water-saving denim"],
     certifications: ["OEKO-TEX"],
-    score: 73,
+    score: 7.3,
     category: "certified",
   },
   {
@@ -910,7 +910,7 @@ export const brands: Brand[] = [
     country: "France",
     tags: ["Responsible sourcing", "DEMAIN program"],
     certifications: [],
-    score: 60,
+    score: 6.0,
     category: "certified",
   },
   {
@@ -919,7 +919,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Make It Possible", "Some recycled"],
     certifications: [],
-    score: 38,
+    score: 3.8,
     category: "certified",
   },
   {
@@ -928,7 +928,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Design the Change", "Some sustainable"],
     certifications: [],
-    score: 40,
+    score: 4.0,
     category: "certified",
   },
   {
@@ -937,7 +937,7 @@ export const brands: Brand[] = [
     country: "USA",
     tags: ["Cottonized hemp", "Organic"],
     certifications: ["GOTS", "B Corp"],
-    score: 70,
+    score: 7.0,
     category: "certified",
   },
 
@@ -947,7 +947,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Linen", "Slow fashion"],
     certifications: [],
-    score: 78,
+    score: 7.8,
     category: "local",
   },
   {
@@ -956,7 +956,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Organic cotton", "Tencel"],
     certifications: ["GOTS"],
-    score: 84,
+    score: 8.4,
     category: "both",
   },
   {
@@ -965,7 +965,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Linen", "Biodegradable", "Slow living"],
     certifications: [],
-    score: 80,
+    score: 8.0,
     category: "local",
   },
   {
@@ -974,7 +974,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Minimalist", "Certified fabrics"],
     certifications: ["OEKO-TEX"],
-    score: 68,
+    score: 6.8,
     category: "both",
   },
   {
@@ -983,7 +983,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Basics", "Zero waste packaging"],
     certifications: ["OEKO-TEX"],
-    score: 77,
+    score: 7.7,
     category: "both",
   },
   {
@@ -992,7 +992,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Minimalist", "Luxury slow fashion"],
     certifications: [],
-    score: 75,
+    score: 7.5,
     category: "local",
   },
   {
@@ -1001,7 +1001,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Organic cotton", "Bamboo", "Linen"],
     certifications: [],
-    score: 73,
+    score: 7.3,
     category: "local",
   },
   {
@@ -1010,7 +1010,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Recycled fruit waste", "Vegan shoes"],
     certifications: [],
-    score: 81,
+    score: 8.1,
     category: "local",
   },
   {
@@ -1019,7 +1019,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Slow fashion", "Local production"],
     certifications: [],
-    score: 72,
+    score: 7.2,
     category: "local",
   },
   {
@@ -1028,7 +1028,7 @@ export const brands: Brand[] = [
     country: "Poland",
     tags: ["Eco-friendly", "Natural materials"],
     certifications: [],
-    score: 70,
+    score: 7.0,
     category: "local",
   },
 ];

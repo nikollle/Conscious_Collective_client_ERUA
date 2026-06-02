@@ -26,12 +26,22 @@ const WardrobeContext = createContext<WardrobeContextType>({
   isInWardrobe: () => false,
 });
 
+const DEFAULT_ITEMS: WardrobeItem[] = [
+  { id: "5901234123457", name: "Organic Cotton T-Shirt", brand: "Patagonia", country: "USA", score: 9.1, co2: 2.1 },
+  { id: "5901234123463", name: "Hemp Cargo Pants", brand: "Thought", country: "UK", score: 8.5, co2: 1.8 },
+  { id: "5901234123460", name: "Linen Summer Dress", brand: "NAGO", country: "Poland", score: 8.8, co2: 1.4 },
+];
+
 export function WardrobeProvider({ children }: { children: React.ReactNode }) {
   const [wardrobeItems, setWardrobeItems] = useState<WardrobeItem[]>([]);
 
   useEffect(() => {
     AsyncStorage.getItem("wardrobe").then((data) => {
-      if (data) setWardrobeItems(JSON.parse(data));
+      if (data) {
+        setWardrobeItems(JSON.parse(data));
+      } else {
+        setWardrobeItems(DEFAULT_ITEMS);
+      }
     });
   }, []);
 

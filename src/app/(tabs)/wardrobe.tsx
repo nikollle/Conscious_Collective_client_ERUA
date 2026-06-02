@@ -6,8 +6,8 @@ import Card from "../../components/Card";
 import { useWardrobe } from "../../context/WardrobeContext";
 
 function getScoreColor(score: number) {
-  if (score >= 70) return "#166534";
-  if (score >= 40) return "#854d0e";
+  if (score >= 7) return "#166534";
+  if (score >= 4) return "#854d0e";
   return "#991b1b";
 }
 

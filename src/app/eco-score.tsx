@@ -1,23 +1,24 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { Alert, ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { useEffect, useMemo, useState } from "react";
+import { ActivityIndicator, Alert, ScrollView, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Card from "../components/Card";
 import { brands } from "../data/brands";
-import { products } from "../data/products";
+import { DEMO_BARCODES, products } from "../data/products";
 import { useWardrobe } from "../context/WardrobeContext";
 
 function getScoreColor(score: number) {
-  if (score >= 70) return "#166534";
-  if (score >= 40) return "#854d0e";
+  if (score >= 7) return "#166534";
+  if (score >= 4) return "#854d0e";
   return "#991b1b";
 }
 
 function getScoreLabel(score: number) {
-  if (score >= 85) return "Excellent";
-  if (score >= 70) return "Good";
-  if (score >= 40) return "Average";
-  if (score >= 20) return "Poor";
+  if (score >= 8.5) return "Excellent";
+  if (score >= 7) return "Good";
+  if (score >= 4) return "Average";
+  if (score >= 2) return "Poor";
   return "Very Poor";
 }
 
@@ -25,11 +26,31 @@ export default function EcoScore() {
   const { barcode: barcodeParam } = useLocalSearchParams();
   const barcode = Array.isArray(barcodeParam) ? barcodeParam[0] : barcodeParam;
   const router = useRouter();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   const { addToWardrobe, isInWardrobe } = useWardrobe();
 
-  const product = products.find((p) => p.barcode === barcode) || products[0];
+  const product = useMemo(() => {
+    const found = products.find((p) => p.barcode === barcode);
+    if (found) return found;
+    const randomBarcode = DEMO_BARCODES[Math.floor(Math.random() * DEMO_BARCODES.length)];
+    return products.find((p) => p.barcode === randomBarcode)!;
+  }, [barcode]);
   const brand = brands.find((b) => b.id === product.brandId);
+
+  if (loading) {
+    return (
+      <SafeAreaView className="flex-1 bg-greige items-center justify-center">
+        <ActivityIndicator size="large" color="#271118" />
+        <Text className="text-plum text-sm mt-4">Analysing product...</Text>
+      </SafeAreaView>
+    );
+  }
   const scoreColor = getScoreColor(product.score);
   const brandScoreColor = brand ? getScoreColor(brand.score) : "#6E4148";
   const alreadySaved = isInWardrobe(product.barcode);
@@ -175,7 +196,7 @@ export default function EcoScore() {
           </Card>
         ))}
 
-        {/* Brand card */}
+        {/* Brand section */}
         {brand && (
           <View className="mt-4">
             <Text
@@ -184,42 +205,70 @@ export default function EcoScore() {
             >
               Brand
             </Text>
-            <Card className="flex-row items-center justify-between">
-              <View className="flex-1">
-                <Text className="text-oxblood text-base font-semibold">
-                  {brand.name}
-                </Text>
-                <Text className="text-plum text-xs mt-1">
-                  {brand.country} · {brand.tags.join(", ")}
-                </Text>
-                {brand.certifications.length > 0 && (
-                  <Text className="text-plum text-xs mt-1">
-                    {brand.certifications.join(" · ")}
+            <View style={{ backgroundColor: "#271118", borderRadius: 16, overflow: "hidden" }}>
+              {/* Header row */}
+              <View style={{ flexDirection: "row", alignItems: "center", padding: 20 }}>
+                {/* Initial avatar */}
+                <View style={{
+                  width: 52, height: 52, borderRadius: 26,
+                  backgroundColor: brandScoreColor,
+                  justifyContent: "center", alignItems: "center",
+                  marginRight: 14,
+                }}>
+                  <Text style={{ fontFamily: "ManlineSlabs", color: "#EEEEEE", fontSize: 22 }}>
+                    {brand.name[0]}
+                  </Text>
+                </View>
+                {/* Name + country */}
+                <View style={{ flex: 1 }}>
+                  <Text style={{ fontFamily: "ManlineSlabs", color: "#EEEEEE", fontSize: 19 }}>
+                    {brand.name}
+                  </Text>
+                  <Text style={{ color: "#ADA590", fontSize: 12, marginTop: 3 }}>
+                    {brand.country}
+                  </Text>
+                </View>
+                {/* Score badge */}
+                <View style={{
+                  backgroundColor: brandScoreColor,
+                  borderRadius: 12,
+                  paddingHorizontal: 14,
+                  paddingVertical: 8,
+                  alignItems: "center",
+                  minWidth: 56,
+                }}>
+                  <Text style={{ color: "#EEEEEE", fontSize: 20, fontWeight: "bold" }}>
+                    {brand.score}
+                  </Text>
+                  <Text style={{ color: "#EEEEEE", fontSize: 10, opacity: 0.8 }}>
+                    / 10
+                  </Text>
+                </View>
+              </View>
+              {/* Tags + certifications */}
+              <View style={{ borderTopWidth: 1, borderTopColor: "#3d1f28", paddingHorizontal: 20, paddingVertical: 16 }}>
+                {brand.tags.length > 0 && (
+                  <Text style={{ color: "#ADA590", fontSize: 12, lineHeight: 18 }}>
+                    {brand.tags.join("  ·  ")}
                   </Text>
                 )}
+                {brand.certifications.length > 0 && (
+                  <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 10 }}>
+                    {brand.certifications.map((cert) => (
+                      <View
+                        key={cert}
+                        style={{
+                          borderWidth: 1, borderColor: "#ADA590",
+                          borderRadius: 20, paddingHorizontal: 10, paddingVertical: 4,
+                        }}
+                      >
+                        <Text style={{ color: "#EEEEEE", fontSize: 11 }}>{cert}</Text>
+                      </View>
+                    ))}
+                  </View>
+                )}
               </View>
-              <View
-                style={{
-                  width: 50,
-                  height: 50,
-                  borderRadius: 25,
-                  borderWidth: 3,
-                  borderColor: brandScoreColor,
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Text
-                  style={{
-                    color: brandScoreColor,
-                    fontSize: 18,
-                    fontWeight: "bold",
-                  }}
-                >
-                  {brand.score}
-                </Text>
-              </View>
-            </Card>
+            </View>
           </View>
         )}
 

@@ -72,6 +72,13 @@ export default function Search() {
           </View>
         }
         renderItem={({ item }) => <BrandCard brand={item} />}
+        ListEmptyComponent={
+          <View className="items-center py-12">
+            <Text className="text-plum text-sm text-center">
+              No brands found. Try a different search.
+            </Text>
+          </View>
+        }
       />
     </SafeAreaView>
   );
@@ -79,9 +86,9 @@ export default function Search() {
 
 function BrandCard({ brand }: { brand: Brand }) {
   const scoreColor =
-    brand.score >= 85
+    brand.score >= 8.5
       ? "text-green-700"
-      : brand.score >= 70
+      : brand.score >= 7
         ? "text-yellow-700"
         : "text-red-700";
 

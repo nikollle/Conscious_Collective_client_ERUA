@@ -100,6 +100,7 @@ export default function SignUp() {
             <Button
               title={loading ? "Creating account…" : "Sign up"}
               onPress={handleSignUp}
+              loading={loading}
             />
           </View>
 

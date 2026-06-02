@@ -1,6 +1,7 @@
 import { CameraView, useCameraPermissions } from "expo-camera";
-import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useFocusEffect, useRouter } from "expo-router";
+import { useCallback, useState } from "react";
+import { DEMO_BARCODES } from "../../data/products";
 import { Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -8,6 +9,12 @@ export default function Scan() {
   const router = useRouter();
   const [permission, requestPermission] = useCameraPermissions();
   const [scanned, setScanned] = useState(false);
+
+  useFocusEffect(
+    useCallback(() => {
+      setScanned(false);
+    }, [])
+  );
 
   // Permission not yet determined
   if (!permission) {
@@ -145,12 +152,10 @@ export default function Scan() {
           {/* Fallback button */}
           {!scanned && (
             <TouchableOpacity
-              onPress={() =>
-                router.push({
-                  pathname: "/eco-score",
-                  params: { barcode: "5901234123457" },
-                })
-              }
+              onPress={() => {
+                const barcode = DEMO_BARCODES[Math.floor(Math.random() * DEMO_BARCODES.length)];
+                router.push({ pathname: "/eco-score", params: { barcode } });
+              }}
               className="mt-8 border border-bone rounded-xl py-3 px-8 opacity-60"
             >
               <Text className="text-bone text-sm">Use demo product</Text>

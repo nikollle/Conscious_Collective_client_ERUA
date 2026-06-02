@@ -1,8 +1,8 @@
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { useState } from "react";
-import { Alert } from "react-native";
 import {
+  Alert,
   KeyboardAvoidingView,
   ScrollView,
   Text,
@@ -111,6 +111,7 @@ export default function LogIn() {
           <Button
             title={loading ? "Logging in…" : "Log in"}
             onPress={handleLogin}
+            loading={loading}
           />
 
           <Text
